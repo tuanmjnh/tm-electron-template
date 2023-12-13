@@ -121,56 +121,56 @@ ipcMain.handle('dialog', (event, arg) => {
 })
 */
 
-export const initialize = () => {
-  ipcMain.handle('dialogOpenFile', (event, arg) => {
-    arg = {
-      ...{
-        title: 'Open file',
-        filters: [{ name: 'All Files', extensions: ['*'] }],
-        properties: [
-          'openFile',
-          'multiSelections',
-          'showHiddenFiles',
-        ]
-      },
-      ...arg
-    }
-    if (arg.sync) return dialog.showOpenDialogSync(arg)
-    else return dialog.showOpenDialog(arg)
-  })
+ipcMain.handle('dialogOpenFile', (event, arg) => {
+  arg = {
+    ...{
+      title: 'Open file',
+      filters: [{ name: 'All Files', extensions: ['*'] }],
+      properties: [
+        'openFile',
+        'multiSelections',
+        'showHiddenFiles',
+      ]
+    },
+    ...arg
+  }
+  if (arg.sync) return dialog.showOpenDialogSync(arg)
+  else return dialog.showOpenDialog(arg)
+})
 
-  ipcMain.handle('dialogOpenFolder', (event, arg) => {
-    arg = {
-      ...{
-        title: 'Open folder',
-        filters: [{ name: 'All Files', extensions: ['*'] }],
-        properties: [
-          'openDirectory',
-          'multiSelections',
-          'showHiddenFiles',
-        ]
-      },
-      ...arg
-    }
-    if (arg.sync) return dialog.showOpenDialogSync(arg)
-    else return dialog.showOpenDialog(arg)
-  })
+ipcMain.handle('dialogOpenFolder', (event, arg) => {
+  arg = {
+    ...{
+      title: 'Open folder',
+      filters: [{ name: 'All Files', extensions: ['*'] }],
+      properties: [
+        'openDirectory',
+        'multiSelections',
+        'showHiddenFiles',
+      ]
+    },
+    ...arg
+  }
+  if (arg.sync) return dialog.showOpenDialogSync(arg)
+  else return dialog.showOpenDialog(arg)
+})
 
-  ipcMain.handle('dialogSaveFile', (event, arg) => {
-    arg = {
-      ...{
-        title: 'Save file',
-        properties: [
-          'showHiddenFiles',
-          'createDirectory',
-          'treatPackageAsDirectory',
-          'showOverwriteConfirmation',
-          'dontAddToRecent'
-        ]
-      },
-      ...arg
-    }
-    if (arg.sync) return dialog.showSaveDialogSync(arg)
-    else return dialog.showSaveDialog(arg)
-  })
-}
+ipcMain.handle('dialogSaveFile', (event, arg) => {
+  arg = {
+    ...{
+      title: 'Save file',
+      properties: [
+        'showHiddenFiles',
+        'createDirectory',
+        'treatPackageAsDirectory',
+        'showOverwriteConfirmation',
+        'dontAddToRecent'
+      ]
+    },
+    ...arg
+  }
+  if (arg.sync) return dialog.showSaveDialogSync(arg)
+  else return dialog.showSaveDialog(arg)
+})
+
+export { }

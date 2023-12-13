@@ -11,17 +11,11 @@ const onDialogOpenFile = (message: any) => {
   })
 }
 const onDialogOpenFolder = (message: any) => {
-  // Send information to the main process
-  // if a listener has been set, then the main process
-  // will react to the request !
   window.electron.ipcRenderer.invoke('dialogOpenFolder', { sync: true }).then(x => {
     input.value = x
   })
 }
 const onDialogSaveFile = (message: any) => {
-  // Send information to the main process
-  // if a listener has been set, then the main process
-  // will react to the request !
   window.electron.ipcRenderer.invoke('dialogSaveFile', { sync: true }).then(x => {
     input.value = x
   })

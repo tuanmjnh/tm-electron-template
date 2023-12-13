@@ -12,6 +12,12 @@ export const constant = [
     component: () => import('../pages/dashboard/index.vue')
   },
   {
+    path: '/window',
+    name: 'window',
+    meta: { title: 'window', icon: 'fa-bell' },
+    component: () => import('../pages/window/index.vue')
+  },
+  {
     path: '/dialog',
     name: 'dialog',
     meta: { title: 'dialog', icon: 'fa-bell' },
