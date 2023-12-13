@@ -2,6 +2,6 @@
 import versions from '@renderer/components/Versions.vue'
 </script>
 <template>
-  dashboard
+  <versions />
 </template>
 <style scoped></style>

@@ -6,7 +6,7 @@ const props = defineProps({
 <template>
   <el-menu-item>
     <i v-if="item.meta.icon" class=" el-icon"><span :class="['fa-solid', item.meta.icon]" /></i>
-    {{ item.meta.title }}
+    {{ item.meta ? $t(`route.${item.meta.title}`) : '' }}
   </el-menu-item>
 </template>
 <style scoped></style>

@@ -1,9 +1,8 @@
 import moment from 'moment'
 // import { axios, api } from './axios'
 import * as directives from './directive'
-import * as prototypes from './prototypes'
-import * as pageTitle from './page-title'
-pageTitle.initialize()
+import './page-title'
+import './prototypes'
 export default (app) => {
   //directives
   Object.keys(directives).forEach(key => {
@@ -15,7 +14,8 @@ export default (app) => {
   // app.provide('$axios', axios)
   // this will allow you to use $api = inject('$api')(for Vue Options API form)
   // app.provide('$api', api)
-
+  // app.config.globalProperties.$axios = axios
+  // app.config.globalProperties.$api = api
   //moment
   app.config.globalProperties.$moment = moment
 }

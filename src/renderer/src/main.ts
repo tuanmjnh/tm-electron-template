@@ -14,7 +14,7 @@ import App from "./App.vue";
 // If you want to use ElMessage, import it.
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "./styles/element-plus-extra.scss";
-
+import "./styles/flag.css";
 //ts
 // window.electronAPI.loadPreferences()
 //fortawesome

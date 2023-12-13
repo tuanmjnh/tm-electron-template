@@ -1,4 +1,3 @@
-export { }
 declare global {
   interface String {
     convertToAscii(): string;
@@ -17,7 +16,7 @@ declare global {
     pushIfNotExistUpdate<T>(element: any, key: any): void;
     distinctArray<T>(): Array<T>;
     distinctArrayObject<T>(key: string): Array<T>;
-    sum<T>(obj: any): number;
+    sum<T>(obj?: any): number;
     max<T>(): number;
     min<T>(): number;
   }
@@ -138,6 +137,12 @@ Array.prototype.pushIfNotExistUpdate = function (element, key) {
     }
   }
 }
+Array.prototype.distinctArray = function () {
+  return [...new Set(this)]
+}
+Array.prototype.distinctArrayObject = function (key) {
+  return [...new Set(this.map(x => x[key]))]
+}
 Array.prototype.sum = function (prop) {
   let total = 0
   if (prop) {
@@ -153,19 +158,9 @@ Array.prototype.sum = function (prop) {
   }
   return total
 }
-
-Array.prototype.distinctArray = function () {
-  return [...new Set(this)]
-}
-
-Array.prototype.distinctArrayObject = function (key) {
-  return [...new Set(this.map(x => x[key]))]
-}
-
 Array.prototype.max = function () {
   return Math.max.apply(null, this)
 }
-
 Array.prototype.min = function () {
   return Math.min.apply(null, this)
 }
@@ -178,3 +173,5 @@ Array.prototype.min = function () {
 //   if (keyA > keyB) return 1
 //   return 0
 // }
+
+export { }

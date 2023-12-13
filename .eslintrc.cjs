@@ -15,6 +15,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-this-alias": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "vue/html-indent": "off",
     "vue/require-default-prop": "off",
     "vue/multi-word-component-names": "off",
     "vue/max-attributes-per-line": "off",

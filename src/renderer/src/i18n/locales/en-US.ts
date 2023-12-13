@@ -28,13 +28,17 @@ export default {
     configs: 'Config',
     orders: 'Orders',
     store: 'Store',
-    data: 'Data',
     import: 'Import',
     importAdd: 'New import',
     export: 'Export',
     exportAdd: 'New export',
     report: 'Report',
     accountLink: 'Account link',
+    dialog: 'Dialog',
+    data: 'Data',
+    table: 'Table',
+    tree: 'Tree',
+    about: 'About'
   },
   global: {
     list: 'List data',

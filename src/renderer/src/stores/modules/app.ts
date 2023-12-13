@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { GetAll } from '../../i18n'
 const NAMESPACED = 'app'
 export default defineStore({
   id: NAMESPACED,
@@ -10,7 +11,9 @@ export default defineStore({
       put: false,
       patch: false,
       delete: false
-    }
+    },
+    languages: GetAll(),//[],
+    rowsPerPageOptions: [10, 20, 50, 100, 200, 0],
   }),
   getters: {},
   actions: {

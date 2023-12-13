@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import localStorage from '../../utils/localStorage'
+import { setI18nLanguage } from '../../i18n'
 
 const NAMESPACED = 'setting'
 const LOCALSTORAGE = localStorage.get(NAMESPACED) || {}
@@ -50,7 +51,8 @@ const INITIALIZE = (state) => {
   document.body.style.fontFamily = state.font.family
   document.body.style.color = state.font.color
   document.body.style.lineHeight = state.font.lineHeight
-  localStorage.set(NAMESPACED, state)
+  setI18nLanguage(state.language)
+  // localStorage.set(NAMESPACED, state)
 }
 
 export default defineStore({

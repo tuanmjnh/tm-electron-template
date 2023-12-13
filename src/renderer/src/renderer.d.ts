@@ -5,7 +5,7 @@ export interface IElectronAPI {
 declare global {
   interface Window {
     electronAPI: IElectronAPI
-    electron: any
+    // electron: any
   }
   interface Navigator {
     browserLanguage: string

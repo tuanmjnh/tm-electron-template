@@ -29,13 +29,18 @@ export default {
     configs: 'Cấu hình',
     orders: 'Đơn hàng',
     store: 'Kho hàng',
-    data: 'Dữ liệu',
+
     import: 'Nhập kho',
     importAdd: 'Nhập kho mới',
     export: 'Xuất kho',
     exportAdd: 'Xuất kho mới',
     report: 'Báo cáo',
     accountLink: 'Tài khoản liên kết',
+    dialog: 'Hộp thoại',
+    data: 'Dữ liệu',
+    table: 'Bảng',
+    tree: 'Cây',
+    about: 'Giới thiệu'
   },
   global: {
     list: 'Danh sách dữ liệu',

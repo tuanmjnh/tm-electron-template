@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n'
 // import Cookies from 'js-cookie'
 import regionConstant from './region'
-const defaultLanguage = 'vi-VN'
+const defaultLanguage = 'en-US'
 // const settings = Cookies.get('settings') ? JSON.parse(Cookies.get('settings')) : null
 let i18n: any = null
 

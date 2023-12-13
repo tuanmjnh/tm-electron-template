@@ -9,11 +9,11 @@ const props = defineProps({
   <el-menu-item-group>
     <template #title>
       <i v-if="group.icon" class="el-icon"><span :class="['fa-solid', group.icon]" /></i>
-      {{ group.title }}
+      {{ $t(`route.${group.title}`) }}
     </template>
     <el-menu-item v-for="(e, i) in items" :key="i">
       <i v-if="e.meta && e.meta.icon" class=" el-icon"><span :class="['fa-solid', e.meta.icon]" /></i>
-      {{ e.meta ? e.meta.title : "" }}
+      {{ e.meta ? $t(`route.${e.meta.title}`) : '' }}
     </el-menu-item>
   </el-menu-item-group>
 </template>

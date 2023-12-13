@@ -38,6 +38,12 @@ export const constant = [
     ]
   },
   {
+    path: '/about',
+    name: 'about',
+    meta: { title: 'about', icon: 'fa-bell' },
+    component: () => import('../pages/about/index.vue')
+  },
+  {
     path: '/login',
     name: 'login',
     meta: { title: 'login', icon: 'login', hidden: true },

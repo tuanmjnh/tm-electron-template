@@ -89,6 +89,10 @@ button {
   }
 }
 
+.el-dropdown-menu__item.selected {
+  color: var(--el-dropdown-menuItem-hover-color);
+}
+
 .m-b-2px {
   margin-bottom: 2px;
 }

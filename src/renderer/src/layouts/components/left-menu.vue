@@ -18,7 +18,7 @@ const onclick = (item: any) => {
       <el-sub-menu v-if="e.children && e.children.length > 0" :index="`${i}`">
         <template #title>
           <i class=" el-icon"><span :class="['fa-solid', e.meta ? e.meta.icon : '']" /></i>
-          {{ e.meta ? e.meta.title : '' }}
+          {{ e.meta ? $t(`route.${e.meta.title}`) : '' }}
         </template>
         <menu-item-group v-if="e.meta && e.meta.group" :group="e.meta.group" :items="e.children" />
         <template v-else>
